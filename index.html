@@ -61,8 +61,8 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--grafite);line-height:1.08;mar
 .hero h1{font-size:clamp(2.7rem, 6.2vw, 5rem);font-weight:800;letter-spacing:-.025em;max-width:14ch}
 .hero .lede{font-size:clamp(1.15rem,2.1vw,1.4rem);color:var(--grafite);margin:22px 0 0;max-width:36ch;line-height:1.38;font-weight:500}
 .hero .quem{margin:18px 0 0;max-width:52ch}
-.hero .local{margin:14px 0 0;color:var(--azul);font-weight:600;font-size:.98rem;display:flex;align-items:center;gap:10px}
-.hero .local::before{content:"";width:9px;height:9px;border-radius:50%;background:#3E9B5A;box-shadow:0 0 0 4px rgba(62,155,90,.18);flex-shrink:0}
+.hero .local{margin:14px 0 0;color:var(--texto);font-weight:400;font-size:.94rem;display:flex;align-items:center;gap:9px;opacity:.85}
+.hero .local::before{content:"";width:7px;height:7px;border-radius:50%;background:#3E9B5A;flex-shrink:0}
 .acoes{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:30px}
 .btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid var(--grafite)}
 .btn.cheio{background:var(--grafite);color:var(--papel)}
@@ -72,18 +72,16 @@ h1,h2,h3,h4{font-family:var(--display);color:var(--grafite);line-height:1.08;mar
 .acoes .txt{font-weight:600;color:var(--grafite);padding:4px 2px}
 .acoes .txt:hover{color:var(--azul)}
 
-.mecanismo{position:relative;width:100%;max-width:440px;margin-inline:auto;aspect-ratio:1/1}
+.mecanismo{position:relative;width:100%;max-width:335px;margin-inline:auto;aspect-ratio:1/1}
 .mecanismo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .mecanismo .foto{
-  position:absolute;left:9.17%;top:9.17%;width:68.33%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;
+  position:absolute;left:9%;top:9%;width:82%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;
   background:var(--aco);display:grid;place-items:center;
 }
 .mecanismo .foto span{font-family:var(--display);font-weight:800;font-size:3.5rem;color:var(--azul)}
 .mecanismo .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
 .g-grande{fill:var(--grafite);transform-box:fill-box;transform-origin:center;animation:gira-a 90s linear infinite}
-.g-pequena{fill:var(--latao);transform-box:fill-box;transform-origin:center;animation:gira-b 30s linear infinite}
 @keyframes gira-a{from{transform:rotate(2.5deg)}to{transform:rotate(362.5deg)}}
-@keyframes gira-b{from{transform:rotate(22.5deg)}to{transform:rotate(-337.5deg)}}
 
 /* ---------- secoes ---------- */
 section{padding:88px 0;scroll-margin-top:60px}
@@ -220,7 +218,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
   .topo nav{display:none}
   .hero{padding:20px 0 56px}
   .hero .wrap{grid-template-columns:1fr;gap:28px}
-  .mecanismo{max-width:340px;order:-1}
+  .mecanismo{max-width:260px;order:-1}
   section{padding:64px 0}
   .projeto{grid-template-columns:minmax(0,1fr);padding:40px 0}
   .impactos{grid-template-columns:1fr 1fr}
@@ -241,7 +239,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
   .portas{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
-  .g-grande,.g-pequena,.term .cursor{animation:none}
+  .g-grande,.term .cursor{animation:none}
   .trilho .fill,.arquivo,.pipe li,.pipe .dot{transition:none}
   html{scroll-behavior:auto}
 }
@@ -272,7 +270,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
         <h1 data-i="h1">Backend, Data &amp; Automation with Python.</h1>
         <p class="lede" data-i="lede">I build systems and pipelines that automate processes, organize data and cut manual work.</p>
         <p class="quem" data-i="quem">IT Analyst at MUPAN / Wetlands International Brasil since April 2026 and Software Engineering student at UFMS. I build internal systems, automations and data solutions, mainly with Python, SQL and APIs.</p>
-        <p class="local" data-i="local">Campo Grande, Brazil. Open to remote work and to relocating.</p>
+        <p class="local" data-i="local">Campo Grande, Brazil. Open to remote opportunities and relocation.</p>
         <div class="acoes">
           <a class="btn cheio" href="#projetos" data-i="btn.proj">View projects</a>
           <a class="btn vazio cv-link" href="assets/cv/Nicolas_Miranda_Bento_CV_EN.pdf" target="_blank" rel="noopener" data-i="btn.cv">Download CV</a>
@@ -282,9 +280,8 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
       </div>
 
       <div class="mecanismo">
-        <svg viewBox="0 0 600 600" aria-hidden="true">
+        <svg viewBox="10 10 500 500" aria-hidden="true">
           <path id="gGrande" class="g-grande" fill-rule="evenodd"/>
-          <path id="gPequena" class="g-pequena" fill-rule="evenodd"/>
         </svg>
         <div class="foto">
           <span>NB</span>
@@ -528,7 +525,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
             </li>
             <li>
               <strong data-i="t4.t">B.Sc. in Software Engineering, UFMS</strong>
-              <span>2023 - 2026</span>
+              <span>2023 - 2027</span>
               <p data-i="t4.p">Federal University of Mato Grosso do Sul.</p>
             </li>
           </ul>
@@ -604,7 +601,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
       "h1": "Backend, dados e automação com Python.",
       "lede": "Construo sistemas e pipelines que automatizam processos, organizam dados e reduzem trabalho manual.",
       "quem": "Analista de TI na MUPAN / Wetlands International Brasil desde abril de 2026 e estudante de Engenharia de Software na UFMS. Desenvolvo sistemas internos, automações e soluções de dados, principalmente com Python, SQL e APIs.",
-      "local": "Campo Grande, Brasil. Aberto a trabalho remoto e a mudar de país.",
+      "local": "Campo Grande, Brasil. Aberto a oportunidades remotas e relocation.",
       "btn.proj": "Ver projetos", "btn.cv": "Baixar CV",
       "proj.h2": "O que eu já coloquei em produção.",
       "proj.intro": "Cada projeto saiu de um problema real de trabalho, e os números vêm do uso real. Os sistemas da MUPAN são internos, por isso não têm link público.",
@@ -686,7 +683,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
       "sk.h3": "Competências", "sk.core": "Principal", "sk.data": "Dados e automação", "sk.ai": "IA aplicada",
       "sk.infra": "Infraestrutura e ferramentas", "sk.vm": "Redes e VMs", "sk.other": "Também conheço",
       "cont.h2": "Vamos trabalhar juntos.",
-      "cont.p": "Estou aberto a vagas em Backend, Python, Engenharia de Dados, Automação e IA aplicada: remoto, presencial ou com mudança de país.",
+      "cont.p": "Estou aberto a vagas em Backend, Python, Engenharia de Dados, Automação e IA aplicada: remoto, presencial ou com relocation.",
       "cont.cv": "Currículo", "cont.cvb": "Baixar PDF", "cont.mail": "E-mail", "cont.mailb": "Escrever",
       "cont.li": "Ver perfil", "cont.gh": "Ver código"
     },
@@ -697,7 +694,7 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
       "h1": "Backend, datos y automatización con Python.",
       "lede": "Construyo sistemas y pipelines que automatizan procesos, organizan datos y reducen el trabajo manual.",
       "quem": "Analista de TI en MUPAN / Wetlands International Brasil desde abril de 2026 y estudiante de Ingeniería de Software en la UFMS. Desarrollo sistemas internos, automatizaciones y soluciones de datos, principalmente con Python, SQL y APIs.",
-      "local": "Campo Grande, Brasil. Abierto a trabajo en remoto y a cambiar de país.",
+      "local": "Campo Grande, Brasil. Abierto a oportunidades en remoto y reubicación.",
       "btn.proj": "Ver proyectos", "btn.cv": "Descargar CV",
       "proj.h2": "Lo que ya he puesto en producción.",
       "proj.intro": "Cada proyecto nació de un problema real de trabajo, y las cifras vienen del uso real. Los sistemas de MUPAN son internos, por eso no tienen enlace público.",
@@ -887,9 +884,8 @@ footer{background:var(--grafite);color:#9FB0BA;padding:0 0 36px;font-size:.92rem
     d += "M"+(cx+furo)+","+cy+"A"+furo+","+furo+" 0 1,0 "+(cx-furo)+","+cy+"A"+furo+","+furo+" 0 1,0 "+(cx+furo)+","+cy+"Z";
     return d;
   }
-  var cx = 260, cy = 260, dist = 321.5, k = Math.SQRT1_2;
+  var cx = 260, cy = 260;
   document.getElementById("gGrande").setAttribute("d", engrenagem(cx, cy, 36, 250, 232, 212));
-  document.getElementById("gPequena").setAttribute("d", engrenagem(cx + dist*k, cy + dist*k, 12, 89.5, 71.5, 26));
 
   /* ---------- pipeline + terminal (log simulado, sempre em ingles) ---------- */
   var roteiro = [
